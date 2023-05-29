@@ -15,6 +15,7 @@
   <body>
     <h1 class="title">To do's</h1>
 
+    <div class="ToDoContainer">
     <section class="myLists">
       <h2 class="title">My lists</h2>
       <ul class="lists">
@@ -23,47 +24,66 @@
         <li class="list-name">To buy</li>
       </ul>
 
-      <form>
-        <input
-          type="text"
-          class="new-list"
-          placeholder="New list name"
-          aria-label="New list name"
-        />
-        <button class="button create" aria-label="Create new list">+</button>
-      </form>
+        <button class="button create" aria-label="Create new list">Create new list</button>
     </section>
 
     <section class="todoList">
-      <h2 class="list-title">Home fix</h2>
 
+    <div class="todoHeader">
+      <h2 class="list-title">Home fix</h2>
+        <button class="button completed">Show completed tasks</button>
+        <button class="button remaining">Show remaining tasks</button>
+        <button class="button all">Show all tasks</button>
+    </div>
       <div class="tasks">
         <div class="task">
+          <div class="status">
           <input type="checkbox" id="task-1" />
           <label for="task-1">
-            <span class="custom-checkbox"></span>
-            Fix curtain hangers
+            Completed <date class="completeddate">29/5-2023</date>
           </label>
         </div>
+        <p class= "taskTitle">
+          Fix curtain hangers
+        </p>
+          <p class= "description">
+            Mesure, mark so it's even, then screw.
+          </p>
+          <date class= "createdDate">
+            29/5-2023
+          </date>
+        
+          <button class="button task edit">Edit task</button>
+          <button class="button task delete">Delete task</button>
+
+        </div>
         <!-- /task-1 -->
+        <div class="task">
+          <div class="status">
+            <label for="task-2">
+              <date class="completeddate"></date>
+            </label>
+            <input type="checkbox" id="task-2" />
+          </div>
+          <p class= "taskTitle">
+            Put up cat wall
+          </p>
+          
+          <p class= "description">
+            Do markup with tape so when we have the machine we can just drill.
+          </p>
+          <date class= "createdDate">
+            20/5-2023
+          </date>
+        
+          <button class="button task edit">Edit task</button>
+          <button class="button task delete">Delete task</button>
 
-      <div class="newTask-create">
-        <h3 class="newTask-title">Create a new task</h3>
-        <form>
-          <input
-            type="text"
-            class="new-task"
-            placeholder="New task name"
-            aria-label="New task name"
-          />
-          <button class="button create" aria-label="Create new task">+</button>
-        </form>
-      </div>
+        </div>
+        <!-- /task-2 -->
 
-      <div class="deleteStuff">
-        <button class="button delete">Clear completed tasks</button>
-        <button class="button delete">Delete list</button>
-      </div>
+          <button class="button create">Create new task</button>
     </section>
+  </div>
   </body>
 </html>

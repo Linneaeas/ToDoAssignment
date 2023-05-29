@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.ToDoContainer {
+  display: flex;
+}
+
+.myLists {
+  padding: 1em;
+  background-color: aquamarine;
+}
+.list-name.active-list {
+  font-weight: 700;
+}
+
+.todoList {
+  margin: auto;
+  padding: 1em;
+  background-color: pink;
+}
+
+.todoHeader {
+  background-color: antiquewhite;
+  padding: 1em;
+  text-align: center;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.taskTitle {
+  font-weight: 600;
+}
+
+p {
+  font-size: 20px;
+}
+
+label {
+  color: rgb(10, 174, 7);
+}
+
+.button.create {
+  margin-top: 3em;
+}
