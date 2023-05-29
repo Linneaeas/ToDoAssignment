@@ -2,7 +2,6 @@ body {
   margin: 0;
   background-image: url("backgroundflower.jpeg");
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: rgb(2, 34, 173);
 }
 
 .title {
@@ -24,25 +23,20 @@ body {
   list-style: none;
 }
 
-.button.newlist {
-  margin-left: 5rem;
-  border: none;
-  font-size: 20px;
-}
-
 .list-name.active-list {
   font-weight: 700;
 }
 
 .todoList {
   display: block;
+  position: relative;
   margin: 0 6em;
   background-image: url("backgroundflower.jpeg");
 }
 
 .todoHeader {
-  padding: 0.5em;
   text-align: center;
+  padding: 1em;
 }
 
 .task {
@@ -57,19 +51,115 @@ body {
 
 .taskTitle {
   font-weight: 600;
-  color: rgb(188, 80, 207);
 }
 
 label {
-  color: rgb(10, 174, 7);
+  color: rgb(23, 247, 2);
+}
+
+h2 {
+  font-size: 25px;
+  color: rgb(182, 95, 198);
+  text-transform: uppercase;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid yellow;
+  border-radius: 50%;
+  outline: none;
+  position: relative;
+}
+
+input[type="checkbox"]:hover {
+  cursor: pointer;
+  scale: calc(200%);
+  content: url("sunflower.png");
+  position: absolute;
+  display: block;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  display: block;
+  border: none;
+  content: url("sunflower.png");
+  position: absolute;
+  top: -1.5em;
+  left: -1em;
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked::before {
+  opacity: 1;
+}
+
+/* Buttons */
+
+.button {
+  background: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border: none;
+  width: 5em;
+  height: 5em;
+}
+.button:hover {
+  cursor: pointer;
+  scale: calc(120%);
+  background-color: rgba(152, 216, 244, 0.1);
+}
+
+.button.newlist {
+  margin-left: 5rem;
+  background-image: url("addlisticon.png");
+  width: 5em;
+  margin-top: 0em;
+}
+
+.button.show.all {
+  background-image: url("allicon.png");
+  width: 7em;
+}
+.button.show.remaining {
+  background-image: url("remainingicon.png");
+  width: 9em;
+  margin-left: 4em;
+}
+.button.show.completed {
+  background-image: url("completedicon.png");
+  width: 9em;
+  margin-left: 4em;
+}
+
+.button.edit {
+  background-image: url("editicon.png");
+  width: 2em;
+  height: 2em;
+}
+
+.button.delete.task {
+  background-image: url("deleteicon.png");
+  width: 2em;
+  height: 2em;
 }
 
 .button.newtask {
+  margin-left: 5rem;
+  background-image: url("addtaskicon.png");
   display: block;
   margin: 0 auto;
 }
 
-h2 {
-  color: rgb(230, 230, 19);
-  font-size: 25px;
+.button.delete.list {
+  background-image: url("deletelisticon.png");
+  width: 7em;
+  position: absolute;
+  bottom: -0.5em;
+  right: 0em;
 }
