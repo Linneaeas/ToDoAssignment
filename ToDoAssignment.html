@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Todo's</title>
     <link
       href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap"
@@ -13,87 +12,77 @@
   </head>
 
   <body>
-    <h1 class="title">STUFF I NEED TO DO</h1>
+    <header>
+      <h1 class="title">STUFF I NEED TO DO</h1>
+    </header>
 
-    <div class="ToDoContainer">
-    <section class="myLists">
-      <ul class="lists">
-        <li class="list-name active-list">Home fix</li>
-        <li class="list-name">School</li>
-        <li class="list-name">To buy</li>
-      </ul>
-        
-      <button class="button newlist"></button>
+    <main>
+      <nav>
+        <ul class="lists">
+          <li class="list-name active-list">Home fix</li>
+          <li class="list-name">School</li>
+          <li class="list-name">To buy</li>
+        </ul>
 
-      <div class="newListName" id="newListForm">
-        <form>
-          <input type="text" placeholder="Enter list name">
-          <input type="submit" value="Create list">
-        </form>
-      </div>
-    </section>
+        <button class="button newlist"></button>
 
-    <section class="todoList">
+        <section class="newListForm" id="newListForm">
+          <form>
+            <input type="text" placeholder="Enter list name" />
+            <input type="submit" value="Create list" />
+          </form>
+        </section>
+      </nav>
 
-    <div class="todoHeader">
-      <h2 class="list-title">Home fix</h2>
-      <button class="button show all"></button>
-      <button class="button show remaining"></button>
-        <button class="button show completed"></button>
-        
-       
-    </div>
-      <div class="tasks">
+      <section class="todoList">
+        <div class="todoHeader">
+          <h2 class="list-title">Home fix</h2>
+          <button class="button show all"></button>
+          <button class="button show remaining"></button>
+          <button class="button show completed"></button>
+        </div>
+
         <div class="task">
           <div class="status">
             <input type="checkbox" id="task-1" />
             <label for="task-1">
-              <span class="completed-label">Completed</span> <span class="completed-date"></span>
+              <span class="completed-label">Completed</span>
+              <span class="completed-date"></span>
             </label>
           </div>
-        <p class= "taskTitle">
-          Fix curtain hangers
-        </p>
-          <p class= "description">
-            Mesure, mark so it's even, then screw.
-          </p>
-          <date class= "createdDate">
-            29/5-2023
-          </date>
-        
+          <p class="taskTitle">Fix curtain hangers</p>
+          <p class="description">Mesure, mark so it's even, then screw.</p>
+          <time class="createdDate"> 29/5-2023 </time>
+
           <button class="button edit"></button>
           <button class="button delete task"></button>
-
         </div>
         <!-- /task-1 -->
         <div class="task">
           <div class="status">
             <input type="checkbox" id="task-2" />
             <label for="task-2">
-              <span class="completed-label">Completed</span> <span class="completed-date"></span>
+              <span class="completed-label">Completed</span>
+              <span class="completed-date"></span>
             </label>
           </div>
-          <p class= "taskTitle">
-            Put up cat wall
-          </p>
-          
-          <p class= "description">
+          <p class="taskTitle">Put up cat wall</p>
+
+          <p class="description">
             Do markup with tape so when we have the machine we can just drill.
           </p>
-          <date class= "createdDate">
-            20/5-2023
-          </date>
-        
+          <time class="createdDate"> 20/5-2023 </time>
+
           <button class="button edit"></button>
           <button class="button delete task"></button>
-
         </div>
         <!-- /task-2 -->
 
-          <button class="button newtask"></button>
-          <button class="button delete list"></button>
-    </section>
-  </div>
-  <script src="ToDoAssignment.js"></script>
+        <button class="button newtask"></button>
+
+        <button class="button delete list"></button>
+      </section>
+    </main>
+    <script src="ToDoAssignment.js"></script>
   </body>
 </html>
