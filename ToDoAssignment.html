@@ -42,52 +42,56 @@
           <button class="button show completed"></button>
         </div>
 
-        <div class="task">
-          <div class="status">
-            <input type="checkbox" id="task-1" />
-            <label for="task-1">
-              <span class="completed-label">Completed</span>
-              <span class="completed-date"></span>
-            </label>
+        <div class="taskContainer">
+          <div class="task">
+            <div class="status">
+              <input type="checkbox" id="task-1" />
+              <label for="task-1">
+                <span class="completed-label">Completed</span>
+                <span class="completed-date"></span>
+              </label>
+            </div>
+            <p class="taskTitle">Fix curtain hangers</p>
+            <p class="description">Mesure, mark so it's even, then screw.</p>
+            <time class="createdDate"> 29/5-2023 </time>
+
+            <button class="button edit"></button>
+            <button class="button delete task"></button>
           </div>
-          <p class="taskTitle">Fix curtain hangers</p>
-          <p class="description">Mesure, mark so it's even, then screw.</p>
-          <time class="createdDate"> 29/5-2023 </time>
+          <!-- /task-1 -->
+          <div class="task">
+            <div class="status">
+              <input type="checkbox" id="task-2" />
+              <label for="task-2">
+                <span class="completed-label">Completed</span>
+                <span class="completed-date"></span>
+              </label>
+            </div>
+            <p class="taskTitle">Put up cat wall</p>
 
-          <button class="button edit"></button>
-          <button class="button delete task"></button>
-        </div>
-        <!-- /task-1 -->
-        <div class="task">
-          <div class="status">
-            <input type="checkbox" id="task-2" />
-            <label for="task-2">
-              <span class="completed-label">Completed</span>
-              <span class="completed-date"></span>
-            </label>
+            <p class="description">
+              Do markup with tape so when we have the machine we can just drill.
+            </p>
+            <time class="createdDate"> 20/5-2023 </time>
+
+            <button class="button edit"></button>
+            <button class="button delete task"></button>
           </div>
-          <p class="taskTitle">Put up cat wall</p>
+          <!-- /task-2 -->
 
-          <p class="description">
-            Do markup with tape so when we have the machine we can just drill.
-          </p>
-          <time class="createdDate"> 20/5-2023 </time>
+          <button class="button newtask"></button>
 
-          <button class="button edit"></button>
-          <button class="button delete task"></button>
+          <section class="newTaskForm" id="newTaskForm">
+            <form>
+              <input type="text" placeholder="Enter task title" />
+              <input type="text" placeholder="Enter description" />
+
+              <input type="submit" value="Create task" />
+            </form>
+          </section>
+
+          <button class="button delete list"></button>
         </div>
-        <!-- /task-2 -->
-
-        <button class="button newtask"></button>
-
-        <section class="newTaskForm" id="newTaskForm">
-          <form>
-            <input type="text" placeholder="Enter task title" />
-            <input type="submit" value="Create task" />
-          </form>
-        </section>
-
-        <button class="button delete list"></button>
       </section>
     </main>
     <script src="ToDoAssignment.js"></script>

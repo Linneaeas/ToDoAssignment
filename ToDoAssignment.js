@@ -10,6 +10,26 @@ newListButton.addEventListener("click", function () {
 });
 //NEWLISTBUTTON END
 
+// NEWLISTBUTTONCREATE START
+newListForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const input = newListForm.querySelector('input[type="text"]');
+  const newListName = input.value;
+
+  const newList = document.createElement("li");
+  newList.classList.add("list-name");
+  newList.textContent = newListName;
+
+  const listsContainer = document.querySelector(".lists");
+
+  listsContainer.appendChild(newList);
+
+  input.value = "";
+  newListForm.style.display = "none";
+});
+// NEWLISTBUTTONCREATE END
+
 //NEWTASKBUTTON START
 const newTaskButton = document.querySelector(".button.newtask");
 const newTaskForm = document.getElementById("newTaskForm");
