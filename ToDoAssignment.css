@@ -53,8 +53,27 @@ body {
   font-weight: 600;
 }
 
+.newListName {
+  display: none;
+}
+
 label {
   color: rgb(23, 247, 2);
+}
+.completed-label {
+  display: none;
+}
+
+.completed-label.visible {
+  display: inline;
+}
+
+.completed-date {
+  display: none;
+}
+
+.completed-date.visible {
+  display: inline;
 }
 
 h2 {

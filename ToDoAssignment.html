@@ -22,8 +22,15 @@
         <li class="list-name">School</li>
         <li class="list-name">To buy</li>
       </ul>
+        
+      <button class="button newlist"></button>
 
-        <button class="button newlist" ></button>
+      <div class="newListName" id="newListForm">
+        <form>
+          <input type="text" placeholder="Enter list name">
+          <input type="submit" value="Create list">
+        </form>
+      </div>
     </section>
 
     <section class="todoList">
@@ -39,11 +46,11 @@
       <div class="tasks">
         <div class="task">
           <div class="status">
-          <input type="checkbox" id="task-1" />
-          <label for="task-1">
-            Completed <date class="completeddate">29/5-2023</date>
-          </label>
-        </div>
+            <input type="checkbox" id="task-1" />
+            <label for="task-1">
+              <span class="completed-label">Completed</span> <span class="completed-date"></span>
+            </label>
+          </div>
         <p class= "taskTitle">
           Fix curtain hangers
         </p>
@@ -61,10 +68,10 @@
         <!-- /task-1 -->
         <div class="task">
           <div class="status">
-            <label for="task-2">
-              <date class="completeddate"></date>
-            </label>
             <input type="checkbox" id="task-2" />
+            <label for="task-2">
+              <span class="completed-label">Completed</span> <span class="completed-date"></span>
+            </label>
           </div>
           <p class= "taskTitle">
             Put up cat wall
@@ -87,5 +94,6 @@
           <button class="button delete list"></button>
     </section>
   </div>
+  <script src="ToDoAssignment.js"></script>
   </body>
 </html>
