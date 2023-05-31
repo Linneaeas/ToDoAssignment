@@ -10,6 +10,18 @@ newListButton.addEventListener("click", function () {
 });
 //NEWLISTBUTTON END
 
+//NEWTASKBUTTON START
+const newTaskButton = document.querySelector(".button.newtask");
+const newTaskForm = document.getElementById("newTaskForm");
+newTaskButton.addEventListener("click", function () {
+  if (newTaskForm.style.display === "none") {
+    newTaskForm.style.display = "block";
+  } else {
+    newTaskForm.style.display = "none";
+  }
+});
+//NEWTASKBUTTON END
+
 //CHECKBOX STATUS AND DATE START
 document.addEventListener("DOMContentLoaded", function () {
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');

@@ -68,19 +68,8 @@ nav {
   display: none;
 }
 
-/* Labels */
-
-label {
-  color: rgb(23, 247, 2);
-}
-
-.completed-label,
-.completed-date {
+.newTaskForm {
   display: none;
-}
-
-.visible {
-  display: inline;
 }
 
 /* Heading */
@@ -126,6 +115,21 @@ input[type="checkbox"]::before {
 
 input[type="checkbox"]:checked::before {
   opacity: 1;
+}
+
+/* Labels */
+
+label {
+  color: rgb(23, 247, 2);
+}
+
+.completed-label,
+.completed-date {
+  display: none;
+}
+
+.visible {
+  display: inline;
 }
 
 /* Buttons */
