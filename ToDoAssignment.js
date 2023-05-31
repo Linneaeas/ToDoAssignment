@@ -1,12 +1,7 @@
 //NEWLISTBUTTON START
-// Select the button element
 const newListButton = document.querySelector(".button.newlist");
-// Select the hidden content element
 const newListForm = document.getElementById("newListForm");
-
-// Add a click event listener to the button
 newListButton.addEventListener("click", function () {
-  // Toggle the visibility of the hidden content
   if (newListForm.style.display === "none") {
     newListForm.style.display = "block";
   } else {
@@ -19,7 +14,9 @@ newListButton.addEventListener("click", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
-  checkboxes.forEach(function (checkbox) {
+  const completionDates = [];
+
+  checkboxes.forEach(function (checkbox, index) {
     const completedLabel =
       checkbox.nextElementSibling.querySelector(".completed-label");
     const completedDate =
@@ -27,10 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     checkbox.addEventListener("change", function () {
       if (checkbox.checked) {
+        completionDates[index] = new Date().toLocaleDateString();
         completedLabel.classList.add("visible");
-        completedDate.textContent = new Date().toLocaleDateString(); // Update with the current date
+        completedDate.textContent = completionDates[index];
         completedDate.classList.add("visible");
       } else {
+        completionDates[index] = null;
         completedLabel.classList.remove("visible");
         completedDate.textContent = "";
         completedDate.classList.remove("visible");

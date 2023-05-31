@@ -74,19 +74,12 @@ label {
   color: rgb(23, 247, 2);
 }
 
-.completed-label {
-  display: none;
-}
-
-.completed-label.visible {
-  display: inline;
-}
-
+.completed-label,
 .completed-date {
   display: none;
 }
 
-.completed-date.visible {
+.visible {
   display: inline;
 }
 
