@@ -35,28 +35,6 @@ nav {
   font-weight: 700;
 }
 
-.newListForm {
-  display: none;
-}
-
-.newListForm form {
-  display: flex;
-  padding-top: 1.5em;
-  gap: 1em;
-}
-
-.newListForm:focus-within input[type="text"] {
-  background-color: rgba(152, 216, 244, 0.7);
-  scale: 120%;
-}
-
-.newListForm input[type="text"] {
-  background-color: rgba(152, 216, 244, 0.3);
-  border: none;
-  outline: none;
-  margin-left: 3em;
-}
-
 /* Todo List */
 
 .todoList {
@@ -85,10 +63,6 @@ nav {
 
 .taskTitle {
   font-weight: 600;
-}
-
-.newTaskForm {
-  display: none;
 }
 
 /* Heading */
@@ -151,12 +125,44 @@ label {
   display: inline;
 }
 
-/* Buttons */
+/* Forms */
+
+.newTaskForm {
+  display: none;
+}
+
+.newListForm {
+  display: none;
+}
+
+.newTaskForm form {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  padding-top: 1.5em;
+  gap: 1em;
+}
+
+form:focus-within input[type="text"] {
+  background-color: rgba(152, 216, 244, 0.7);
+  scale: 120%;
+}
+
+form input[type="text"] {
+  background-color: rgba(152, 216, 244, 0.3);
+  border: none;
+  outline: none;
+  margin-left: 3em;
+}
 
 input[type="submit"] {
   background-color: rgb(182, 95, 198);
   border: none;
   outline: none;
+  margin-left: 1em;
   color: rgba(152, 216, 244);
 }
 
@@ -164,6 +170,8 @@ input[type="submit"]:hover {
   cursor: pointer;
   scale: 120%;
 }
+
+/* Buttons */
 
 .button {
   background: none;
