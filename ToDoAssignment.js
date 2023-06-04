@@ -66,13 +66,9 @@ taskForm.addEventListener("submit", function (event) {
   checkbox.id = "task-" + (taskContainer.childElementCount + 1); //Assigns a unique ID to the checkbox by concatenating the string "task-" with the current count of child elements in taskContainer.
   statusDiv.appendChild(checkbox); //Appends the checkbox as a child of statusDiv.
 
-  const label = document.createElement("label"); //Creates a new  element &  assigns it to the variable label.
-  label.htmlFor = "task-" + (taskContainer.childElementCount + 1); //Sets the html for attribute of the label to match the ID of the associated checkbox
-  statusDiv.appendChild(label); //appends the label as a child of statusDiv.
-
   const completedDate = document.createElement("span"); //Creates a new element & assigns it to the variable completedDate.
   completedDate.classList.add("completed-date"); //Adds the css class "completed-date" to the completedDate.
-  label.appendChild(completedDate); //Appends the completedDate as a child of label.
+  statusDiv.appendChild(completedDate); //Appends the completedDate as a child of statusDiv.
 
   taskElement.appendChild(statusDiv); //Appends the statusDiv element as a child of taskElement.
 

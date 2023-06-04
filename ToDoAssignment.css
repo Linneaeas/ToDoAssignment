@@ -120,19 +120,13 @@ input[type="checkbox"]:checked::before {
   opacity: 1;
 }
 
-/* Labels */
-
-label {
-  color: rgb(23, 247, 2);
-  margin-left: 1em;
-}
-
 .completed-date {
   display: none;
 }
 
 .visible {
   display: inline;
+  color: rgb(23, 247, 2);
 }
 
 /* Forms */
