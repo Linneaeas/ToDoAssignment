@@ -1,3 +1,13 @@
+// NO TASKS MESSAGE START
+const noTasksMessage = document.querySelector(".no-tasks-message"); //Selects the element & assigns it to the variable noTasksMessage.
+
+function toggleNoTasksMessage() {
+  //Declares a function named toggleNoTasksMessage.
+  noTasksMessage.style.display =
+    taskContainer.childElementCount === 0 ? "block" : "none"; //Toggle display of no tasks message.
+}
+// NO TASKS MESSAGE END
+
 // NEWLISTBUTTON START
 const newListButton = document.querySelector(".button.newlist"); //Selects the element & assigns it to the variable newListButton.
 const newListForm = document.getElementById("newListForm"); //Selects the element & assigns it to the variable newListForm.
@@ -97,8 +107,13 @@ taskForm.addEventListener("submit", function (event) {
   taskElement.appendChild(editButton); // Appends the editButton as a child of taskElement.
 
   const deleteButton = document.createElement("button"); //Creates a new element & assigns it to the variable deleteButton.
-  deleteButton.classList.add("button", "delete", "task"); //Adds the css classes "button", "delete", and "task" to the deleteButton
+  deleteButton.classList.add("delete", "button", "task"); //Adds the css classes "button", "delete", and "task" to the deleteButton
   taskElement.appendChild(deleteButton); //Appends the deleteButton as a child of taskElement.
+
+  deleteButton.addEventListener("click", function () {
+    taskElement.parentNode.removeChild(taskElement);
+    toggleNoTasksMessage();
+  });
 
   taskContainer.insertBefore(taskElement, newTaskForm); //Inserts the taskElement as a new child element before the newTaskForm element within the taskContainer element.
 
@@ -131,13 +146,3 @@ document.addEventListener("change", function (event) {
     toggleNoTasksMessage(); //Calls the toggleNoTasksMessage() function.
   }
 });
-
-// NO TASKS MESSAGE START
-const noTasksMessage = document.querySelector(".no-tasks-message"); //Selects the element & assigns it to the variable noTasksMessage.
-
-function toggleNoTasksMessage() {
-  //Declares a function named toggleNoTasksMessage.
-  noTasksMessage.style.display =
-    taskContainer.childElementCount === 0 ? "block" : "none"; //Toggle display of no tasks message.
-}
-// NO TASKS MESSAGE END

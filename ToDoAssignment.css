@@ -72,7 +72,7 @@ nav {
 }
 
 .createdDate {
-  color: rgb(74, 163, 201);
+  color: rgb(47, 138, 178);
 }
 
 /* Heading */
@@ -83,7 +83,17 @@ h2 {
   text-transform: uppercase;
 }
 
-/* Checkboxes */
+/* Status & Checkboxes */
+.completed-date {
+  display: none;
+}
+.visible {
+  display: inline;
+}
+.visible.completed-date {
+  color: rgb(23, 247, 2);
+  margin-left: 1em;
+}
 
 input[type="checkbox"] {
   appearance: none;
@@ -118,15 +128,6 @@ input[type="checkbox"]::before {
 
 input[type="checkbox"]:checked::before {
   opacity: 1;
-}
-
-.completed-date {
-  display: none;
-}
-
-.visible {
-  display: inline;
-  color: rgb(23, 247, 2);
 }
 
 /* Forms */
