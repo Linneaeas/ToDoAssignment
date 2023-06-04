@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="ToDoAssignment.css" />
+    <script src="ToDoAssignment.js" defer></script>
   </head>
 
   <body>
@@ -41,41 +42,7 @@
         </div>
 
         <div class="taskContainer">
-          <div class="task">
-            <div class="status">
-              <input type="checkbox" id="task-1" />
-              <label for="task-1">
-                <span class="completed-label">Completed</span>
-                <span class="completed-date"></span>
-              </label>
-            </div>
-            <p class="taskTitle">Fix curtain hangers</p>
-            <p class="description">Mesure, mark so it's even, then screw.</p>
-            <time class="createdDate"> 29/5-2023 </time>
-
-            <button class="button edit"></button>
-            <button class="button delete task"></button>
-          </div>
-          <!-- /task-1 -->
-          <div class="task">
-            <div class="status">
-              <input type="checkbox" id="task-2" />
-              <label for="task-2">
-                <span class="completed-label">Completed</span>
-                <span class="completed-date"></span>
-              </label>
-            </div>
-            <p class="taskTitle">Put up cat wall</p>
-
-            <p class="description">
-              Do markup with tape so when we have the machine we can just drill.
-            </p>
-            <time class="createdDate"> 20/5-2023 </time>
-
-            <button class="button edit"></button>
-            <button class="button delete task"></button>
-          </div>
-          <!-- /task-2 -->
+          <p class="no-tasks-message">This list doesn't have any tasks yet.</p>
           <section class="newTaskForm" id="newTaskForm">
             <form>
               <input
@@ -98,6 +65,5 @@
         </div>
       </section>
     </main>
-    <script src="ToDoAssignment.js"></script>
   </body>
 </html>

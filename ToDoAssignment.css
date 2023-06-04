@@ -51,6 +51,12 @@ nav {
 
 /* Tasks */
 
+.no-tasks-message {
+  display: flex;
+  justify-content: center;
+  color: rgb(182, 95, 198);
+}
+
 .task {
   display: flex;
   align-items: center;
@@ -63,6 +69,10 @@ nav {
 
 .taskTitle {
   font-weight: 600;
+}
+
+.createdDate {
+  color: rgb(74, 163, 201);
 }
 
 /* Heading */
@@ -114,9 +124,9 @@ input[type="checkbox"]:checked::before {
 
 label {
   color: rgb(23, 247, 2);
+  margin-left: 1em;
 }
 
-.completed-label,
 .completed-date {
   display: none;
 }
@@ -203,13 +213,11 @@ input[type="submit"]:hover {
 .button.show.remaining {
   background-image: url("remainingicon.png");
   width: 9em;
-  margin-left: 4em;
 }
 
 .button.show.completed {
   background-image: url("completedicon.png");
   width: 9em;
-  margin-left: 4em;
 }
 
 .button.edit {
