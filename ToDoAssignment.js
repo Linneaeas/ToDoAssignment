@@ -179,7 +179,7 @@ function showRemainingTasks() {
   tasks.forEach(function (task) {
     const checkbox = task.querySelector('input[type="checkbox"]');
 
-    if (checkbox.checked) {
+    if (checkbox && checkbox.checked) {
       task.style.display = "none";
     } else {
       task.style.display = "flex";
@@ -193,11 +193,12 @@ function showCompletedTasks() {
   tasks.forEach(function (task) {
     const checkbox = task.querySelector('input[type="checkbox"]');
 
-    if (checkbox.checked) {
+    if (checkbox && checkbox.checked) {
       task.style.display = "flex";
     } else {
       task.style.display = "none";
     }
   });
 }
+
 // ALL, REMAINING, COMPLETED BUTTONS END
