@@ -123,6 +123,7 @@ taskForm.addEventListener("submit", function (event) {
 
   toggleNoTasksMessage(); //Calls the toggleNoTasksMessage() function.
 });
+// CREATE NEW TASK START
 
 // CHECKBOX STATUS AND DATE START
 document.addEventListener("change", function (event) {
@@ -146,3 +147,57 @@ document.addEventListener("change", function (event) {
     toggleNoTasksMessage(); //Calls the toggleNoTasksMessage() function.
   }
 });
+
+// ALL, REMAINING, COMPLETED BUTTONS START
+const allButton = document.querySelector(".button.all"); // Selects the element with class "button.all" & assigns it to the variable allButton.
+const remainingButton = document.querySelector(".button.remaining"); // Selects the element with class "button.remaining" & assigns it to the variable remainingButton.
+const completedButton = document.querySelector(".button.completed"); // Selects the element with class "button.completed" & assigns it to the variable completedButton.
+
+allButton.addEventListener("click", function () {
+  showAllTasks();
+});
+
+remainingButton.addEventListener("click", function () {
+  showRemainingTasks();
+});
+
+completedButton.addEventListener("click", function () {
+  showCompletedTasks();
+});
+
+function showAllTasks() {
+  const tasks = document.querySelectorAll(".task");
+
+  tasks.forEach(function (task) {
+    task.style.display = "flex";
+  });
+}
+
+function showRemainingTasks() {
+  const tasks = document.querySelectorAll(".task");
+
+  tasks.forEach(function (task) {
+    const checkbox = task.querySelector('input[type="checkbox"]');
+
+    if (checkbox.checked) {
+      task.style.display = "none";
+    } else {
+      task.style.display = "flex";
+    }
+  });
+}
+
+function showCompletedTasks() {
+  const tasks = document.querySelectorAll(".task");
+
+  tasks.forEach(function (task) {
+    const checkbox = task.querySelector('input[type="checkbox"]');
+
+    if (checkbox.checked) {
+      task.style.display = "flex";
+    } else {
+      task.style.display = "none";
+    }
+  });
+}
+// ALL, REMAINING, COMPLETED BUTTONS END
