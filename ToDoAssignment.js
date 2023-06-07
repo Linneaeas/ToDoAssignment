@@ -7,32 +7,46 @@ function toggleNoTasksMessage() {
 
 // NO TASKS MESSAGE END
 
-// NEWLISTBUTTON START
-const newListButton = document.querySelector(".button.newlist");
-const newListForm = document.getElementById("newListForm");
+// FILTER BY CATEGORY START
+const categoryFilter = document.getElementById("enterTaskCategory");
+categoryFilter.addEventListener("change", filterTasksByCategory);
 
-newListButton.addEventListener("click", function () {
-  newListForm.style.display =
-    newListForm.style.display === "none" ? "block" : "none";
-});
-// NEWLISTBUTTON END
+function filterTasksByCategory() {
+  const selectedCategory = categoryFilter.value;
+  const tasks = document.querySelectorAll(".task");
 
-// CREATE NEW LIST START
-newListForm.addEventListener("submit", function (event) {
-  event.preventDefault();
+  tasks.forEach((task) => {
+    if (
+      selectedCategory === "" ||
+      task.querySelector(".category").textContent === selectedCategory
+    ) {
+      task.style.display = "flex"; // Show the task
+    } else {
+      task.style.display = "none"; // Hide the task
+    }
+  });
+}
 
-  const input = newListForm.querySelector('input[type="text"]');
-  const newListName = input.value;
-  const newList = document.createElement("li");
-  newList.classList.add("list-name");
-  newList.textContent = newListName;
-  const listsContainer = document.querySelector(".lists");
-  listsContainer.appendChild(newList);
+const taskCategoryInput = document.getElementById("taskCategory");
+const categoryList = document.getElementById("category");
 
-  input.value = "";
-  newListForm.style.display = "none";
-});
-// CREATE NEW LIST END
+taskCategoryInput.addEventListener("input", updateCategoryList);
+
+function updateCategoryList() {
+  const enteredCategory = taskCategoryInput.value;
+
+  // Create and append new options based on user input
+  const options = document.querySelectorAll(".category");
+  options.forEach((option) => {
+    if (option.textContent.startsWith(enteredCategory)) {
+      const newOption = document.createElement("option");
+      newOption.value = option.textContent;
+      newOption.textContent = option.textContent;
+      categoryList.appendChild(newOption);
+    }
+  });
+}
+// FILTER BY CATEGORY END
 
 // NEWTASKBUTTON START
 const newTaskButton = document.querySelector(".button.newtask");
@@ -55,6 +69,7 @@ taskForm.addEventListener("submit", function (event) {
   const taskDescriptionInput = document.getElementById("enterTaskDescription");
   const taskTitle = taskTitleInput.value;
   const taskDescription = taskDescriptionInput.value;
+  const taskCategory = document.getElementById("taskCategory").value;
   const taskElement = document.createElement("div");
   taskElement.classList.add("task");
 
@@ -81,6 +96,11 @@ taskForm.addEventListener("submit", function (event) {
   taskDescriptionElement.textContent = taskDescription;
   taskElement.appendChild(taskDescriptionElement);
 
+  const taskCategoryElement = document.createElement("span");
+  taskCategoryElement.classList.add("category");
+  taskCategoryElement.textContent = taskCategory;
+  taskElement.appendChild(taskCategoryElement);
+
   const createdDateElement = document.createElement("time");
   createdDateElement.classList.add("createdDate");
   const currentDate = new Date();
@@ -89,11 +109,13 @@ taskForm.addEventListener("submit", function (event) {
   }-${currentDate.getFullYear()}`;
   createdDateElement.textContent = formattedDate;
   taskElement.appendChild(createdDateElement);
-
+  //EDIT BUTTON START
   const editButton = document.createElement("button");
   editButton.classList.add("button", "edit");
   taskElement.appendChild(editButton);
+  //EDIT BUTTON  END
 
+  //DELETE BUTTON START
   const deleteButton = document.createElement("button");
   deleteButton.classList.add("delete", "button", "task");
   taskElement.appendChild(deleteButton);
@@ -101,6 +123,7 @@ taskForm.addEventListener("submit", function (event) {
     taskElement.parentNode.removeChild(taskElement);
     toggleNoTasksMessage();
   });
+  //DELETE BUTTON START
 
   taskContainer.insertBefore(taskElement, newTaskForm);
 
@@ -109,7 +132,7 @@ taskForm.addEventListener("submit", function (event) {
   newTaskForm.style.display = "none";
   toggleNoTasksMessage();
 });
-// CREATE NEW TASK START
+// CREATE NEW TASK END
 
 // CHECKBOX STATUS AND DATE START
 document.addEventListener("change", function (event) {
@@ -129,7 +152,7 @@ document.addEventListener("change", function (event) {
 });
 // CHECKBOX STATUS AND DATE END
 
-// ALL, REMAINING, COMPLETED BUTTONS START
+// SHOW: ALL, REMAINING, COMPLETED BUTTONS START
 const allButton = document.querySelector(".button.all");
 const remainingButton = document.querySelector(".button.remaining");
 const completedButton = document.querySelector(".button.completed");
@@ -180,4 +203,4 @@ function showCompletedTasks() {
     }
   });
 }
-// ALL, REMAINING, COMPLETED BUTTONS END
+// SHOW: ALL, REMAINING, COMPLETED BUTTONS END

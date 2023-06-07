@@ -19,18 +19,18 @@
 
     <main>
       <nav>
-        <ul class="lists">
-          <li class="list-name active-list">Home fix</li>
-          <li class="list-name">School</li>
-          <li class="list-name">To buy</li>
-        </ul>
-        <section class="newListForm" id="newListForm">
-          <form>
-            <input type="text" placeholder="Enter list name" />
-            <input type="submit" value="Create list" />
-          </form>
-        </section>
-        <button class="button newlist"></button>
+        <input
+          type="text"
+          id="enterTaskCategory"
+          placeholder="Choose category"
+          list="category"
+        />
+        <datalist class="category">
+          <option value=""></option>
+          <option value="Home fix"></option>
+          <option value="School"></option>
+          <option value="To buy"></option>
+        </datalist>
       </nav>
 
       <section class="todoList">
@@ -54,6 +54,13 @@
                 type="text"
                 id="enterTaskDescription"
                 placeholder="Enter description"
+              />
+
+              <input
+                type="text"
+                id="taskCategory"
+                placeholder="Choose category"
+                list="category"
               />
 
               <input type="submit" value="Create task" />

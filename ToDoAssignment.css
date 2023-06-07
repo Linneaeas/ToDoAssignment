@@ -23,16 +23,12 @@ nav {
   font-size: 20px;
 }
 
-.lists {
+datalist {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4em;
   list-style: none;
-}
-
-.list-name.active-list {
-  font-weight: 700;
 }
 
 /* Todo List */
@@ -194,11 +190,11 @@ input[type="submit"]:hover {
   background-color: rgba(152, 216, 244, 0.1);
 }
 
-.button.newlist {
+/*.button.newlist {
   background-image: url("addlisticon.png");
   width: 5em;
   margin-left: 5em;
-}
+}*/
 
 .button.show.all {
   background-image: url("allicon.png");
