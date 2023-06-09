@@ -98,8 +98,10 @@ taskForm.addEventListener("submit", function (event) {
   deleteButton.classList.add("button", "delete", "task-2");
   taskElement.appendChild(deleteButton);
   deleteButton.addEventListener("click", function () {
-    taskElement.parentNode.removeChild(taskElement);
-    toggleNoTasksMessage();
+    const confirmation = confirm("Are you sure you want to delete this task?");
+    if (confirmation) {
+      taskElement.parentNode.removeChild(taskElement);
+    }
   });
 
   taskContainer.insertBefore(taskElement, newTaskForm);
