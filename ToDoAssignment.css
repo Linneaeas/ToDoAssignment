@@ -221,7 +221,7 @@ input[type="submit"]:hover {
   height: 2em;
 }
 
-.button.delete.task {
+.button.delete.task-2 {
   background-image: url("deleteicon.png");
   width: 2em;
   height: 2em;

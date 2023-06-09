@@ -95,7 +95,7 @@ taskForm.addEventListener("submit", function (event) {
   taskElement.appendChild(editButton);
 
   const deleteButton = document.createElement("button");
-  deleteButton.classList.add("delete", "button", "task");
+  deleteButton.classList.add("button", "delete", "task-2");
   taskElement.appendChild(deleteButton);
   deleteButton.addEventListener("click", function () {
     taskElement.parentNode.removeChild(taskElement);
@@ -169,7 +169,6 @@ function showRemainingTasks() {
 
 function showCompletedTasks() {
   const tasks = document.querySelectorAll(".task");
-
   tasks.forEach(function (task) {
     const checkbox = task.querySelector('input[type="checkbox"]');
 
