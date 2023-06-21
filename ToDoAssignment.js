@@ -90,10 +90,6 @@ taskForm.addEventListener("submit", function (event) {
   createdDateElement.textContent = formattedDate;
   taskElement.appendChild(createdDateElement);
 
-  const editButton = document.createElement("button");
-  editButton.classList.add("button", "edit");
-  taskElement.appendChild(editButton);
-
   const deleteButton = document.createElement("button");
   deleteButton.classList.add("button", "delete", "task-2");
   taskElement.appendChild(deleteButton);
@@ -119,10 +115,13 @@ document.addEventListener("change", function (event) {
     const checkbox = event.target;
     const taskElement = checkbox.closest(".task");
     const completedDate = taskElement.querySelector(".completed-date");
+    const taskTitle = taskElement.querySelector(".taskTitle");
 
     if (checkbox.checked) {
       completedDate.textContent = new Date().toLocaleDateString();
       completedDate.classList.add("visible");
+      taskTitle.style.textDecoration = "line-through";
+      taskTitle.style.color = "rgb(182, 95, 198, 0.7)";
     } else {
       completedDate.textContent = "";
       completedDate.classList.remove("visible");

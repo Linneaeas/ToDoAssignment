@@ -20,22 +20,23 @@
     <main>
       <nav>
         <ul class="lists">
-          <li class="list-name active-list">Home fix</li>
+          <li class="list-name active-list">ALL TO DO'S</li>
+          <li class="list-name">Home fix</li>
           <li class="list-name">School</li>
           <li class="list-name">To buy</li>
         </ul>
-        <section class="newListForm" id="newListForm">
+        <div class="newListForm" id="newListForm">
           <form>
             <input type="text" placeholder="Enter list name" />
             <input type="submit" value="Create list" />
           </form>
-        </section>
+        </div>
         <button class="button newlist"></button>
       </nav>
 
       <section class="todoList">
         <div class="todoHeader">
-          <h2 class="list-title">Home fix</h2>
+          <h2 class="list-title">All To do's</h2>
           <button class="button show all"></button>
           <button class="button show remaining"></button>
           <button class="button show completed"></button>
@@ -43,7 +44,7 @@
 
         <div class="taskContainer">
           <p class="no-tasks-message">This list doesn't have any tasks yet.</p>
-          <section class="newTaskForm" id="newTaskForm">
+          <div class="newTaskForm" id="newTaskForm">
             <form>
               <input
                 type="text"
@@ -58,9 +59,8 @@
 
               <input type="submit" value="Create task" />
             </form>
-          </section>
+          </div>
           <button class="button newtask"></button>
-
           <button class="button delete list"></button>
         </div>
       </section>
