@@ -33,7 +33,7 @@ nav {
   list-style: none;
   text-transform: uppercase;
   font-weight: 600;
-  color: rgb(1, 75, 106);
+  color: rgb(0, 53, 76);
 }
 
 .list-name.active-list {
@@ -46,7 +46,7 @@ nav {
   display: block;
   position: relative;
   margin: 0 6em;
-  background-color: rgba(152, 216, 244, 0.5);
+  background-color: rgba(152, 216, 244, 0.6);
 }
 
 .todoHeader {
@@ -66,8 +66,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2em;
-  background-color: rgba(152, 216, 244, 0.7);
   margin-left: 1em;
   margin-right: 1em;
 }
